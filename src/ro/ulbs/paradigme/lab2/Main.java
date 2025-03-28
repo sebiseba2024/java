@@ -79,7 +79,10 @@ public class Main {
         }
         System.out.println("X+Y limited by p: "+xPlusYLimitedByP);*/
 
-        //Lab4ex2
+        //Laboratorul5ex1
+
+
+
 
     }
 
