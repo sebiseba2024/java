@@ -5,10 +5,7 @@ public abstract class ACalculator {
     public Object result() {
         return state;
     }
-    public Object clear(){
-        state = 0;
-        return this;
-    }
+    public abstract Object clear();
     public abstract Object init() ;
 
 

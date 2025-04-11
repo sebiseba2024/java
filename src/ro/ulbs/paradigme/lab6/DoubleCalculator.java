@@ -5,6 +5,9 @@ public class DoubleCalculator extends ACalculator{
     public DoubleCalculator(double a) {
         state = a;
     }
+    public DoubleCalculator() {
+        state = 0.0;
+    }
         public DoubleCalculator add(double a){
             state = (double) state + a;
             return this;
@@ -18,12 +21,25 @@ public class DoubleCalculator extends ACalculator{
             return this;
         }
         public DoubleCalculator divide(double a){
-            state = (double) state / a;
-            return this;
+            if(a == 0){
+                throw new ArithmeticException("Division by zero");
+            }
+            else {
+                state = (double) state / a;
+                return this;
+            }
         }
-
+    public DoubleCalculator setState(double a){
+        state = a;
+        return this;
+    }
     @Override
     public DoubleCalculator init() {
+        state=0.0;
+        return this;
+    }
+    @Override
+    public DoubleCalculator clear() {
         state=0.0;
         return this;
     }

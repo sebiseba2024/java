@@ -20,9 +20,17 @@ public class NewIntCalculator extends ACalculator{
             state = (int) state / a;
         return this;
     }
-
+    public NewIntCalculator setState(int a) {
+        state =a;
+        return this;
+    }
     @Override
     public NewIntCalculator init() {
+        state=0;
+        return this;
+    }
+    @Override
+    public NewIntCalculator clear() {
         state=0;
         return this;
     }
